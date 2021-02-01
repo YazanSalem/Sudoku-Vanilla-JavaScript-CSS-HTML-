@@ -1,1 +1,1 @@
-# Sudoku-Vanilla-JavaScript-CSS-HTML-
+# Sudoku-Vanilla-JavaScript-CSS-HTML
