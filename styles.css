@@ -1,0 +1,35 @@
+.hidden{
+    display: none;
+}
+
+body.dark{
+    background-color: black;
+    color: white;
+}
+
+header{
+    text-align: center;
+    background-color: #fefae0;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #D4A373;
+}
+h1{
+    font-size: 45pt;
+}
+
+#setup{
+    display: flex;
+    justify-content: center;
+}
+
+#setup > *{
+    margin-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    justify-self: center;
+}
