@@ -1,5 +1,11 @@
+
 .hidden{
     display: none;
+}
+
+body{
+    background-color: #fefae0;
+    color: black;
 }
 
 body.dark{
@@ -9,7 +15,6 @@ body.dark{
 
 header{
     text-align: center;
-    background-color: #fefae0;
     padding-bottom: 10px;
     border-bottom: 5px solid #D4A373;
 }
@@ -32,6 +37,62 @@ h1{
 
 button{
     justify-self: center;
+    background: none;
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 15px;
+    border-radius: 2px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+button::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(-100px) scaleX(-15deg);
+}
+
+button:hover{
+    background: blue;
+    cursor: pointer;
+}
+
+button:hover:before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s
+}
+button:hover:before{
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s
 }
 
 p#timer, p#lives{
