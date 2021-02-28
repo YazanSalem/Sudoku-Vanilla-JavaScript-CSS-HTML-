@@ -141,7 +141,7 @@ p.incorrect{
 }
 
 .bottomBorder{
-    border-right: 4px solid var(--black);
+    border-bottom: 4px solid var(--black);
 }
 
 footer{

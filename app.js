@@ -57,7 +57,7 @@
         //Creating paragraph element for tiles
         let tile = document.createElement('p');
          //check wether tile is blank or has a value
-        if(board.charAt(i) == '-'){
+        if(board.charAt(i) != '-'){
             //set tile to number
             tile.textContent = board.charAt(i);
         }else{
@@ -77,10 +77,7 @@
       else if(tile.id > 44 && tile.id < 54){
         tile.classList.add("bottomBorder");
       }
-      else if ((tile.id + 1) % 9 === 3){
-        tile.classList.add("rightBorder");
-      }
-      else if ((tile.id + 1) % 9 == 6){
+      if ((tile.id + 1) % 9 === 3 || (tile.id + 1) % 9 == 6){
         tile.classList.add("rightBorder");
       }
 
