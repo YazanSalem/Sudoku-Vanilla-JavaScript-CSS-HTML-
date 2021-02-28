@@ -51,22 +51,40 @@
       clearPrev();
       //Let used to increment tile ids
       let idCount = 0;
+      let boardLength = 81;
       //Creat 81 tiles
-      for (let i = 0; i < 81; i++){
+      for (let i = 0; i < boardLength; i++){
         //Creating paragraph element for tiles
         let tile = document.createElement('p');
          //check wether tile is blank or has a value
         if(board.charAt(i) == '-'){
-            //set tile to empty
-        }else{
-            //set tile to value
+            //set tile to number
             tile.textContent = board.charAt(i);
+        }else{
+            //click event
+           
             }
       //Assign tile id
       tile.id = idCount;
       //Increment for next Tile
       idCount++;
       //add tile class to all tiles
+      tile.classList.add("tile");
+      if(title.id > 17 && title.id < 27) {
+        title.classList.add("bottomBorder");
+      }
+      else if(title.id > 44 && title.id < 54){
+        title.classList.add("bottomBorder");
+      }
+      else if ((title.id + 1) % 9 === 3){
+        tile.classList.add("rightBorder");
+      }
+      else if ((title.id + 1) % 9 == 6){
+        title.classList.add("rightBorder");
+      }
+
+      //Add tiles to board
+      id("board").appendChild(tile);
       
     }
   }
