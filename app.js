@@ -70,21 +70,22 @@
       idCount++;
       //add tile class to all tiles
       tile.classList.add("tile");
-      if(title.id > 17 && title.id < 27) {
-        title.classList.add("bottomBorder");
+
+      if(tile.id > 17 && tile.id < 27) {
+        tile.classList.add("bottomBorder");
       }
-      else if(title.id > 44 && title.id < 54){
-        title.classList.add("bottomBorder");
+      else if(tile.id > 44 && tile.id < 54){
+        tile.classList.add("bottomBorder");
       }
-      else if ((title.id + 1) % 9 === 3){
+      else if ((tile.id + 1) % 9 === 3){
         tile.classList.add("rightBorder");
       }
-      else if ((title.id + 1) % 9 == 6){
-        title.classList.add("rightBorder");
+      else if ((tile.id + 1) % 9 == 6){
+        tile.classList.add("rightBorder");
       }
 
       //Add tiles to board
-      id("board").appendChild(tile);
+      getId("board").appendChild(tile);
       
     }
   }
@@ -113,6 +114,9 @@
   function getElement(id){
     return document.querySelector(id);
   } 
+  function getId(id){
+    return document.getElementById(id);
+  }
 
   function getAllElements(id){
     return document.querySelectorAll(id);
